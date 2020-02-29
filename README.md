@@ -9,4 +9,4 @@ TailWHill.m does the same, but for weighted data.
 TailZipf.m is a function that returns estimators based on the QQ-plots. The advantage of these estimators is that they are robust to deviations from the Pareto distribution. They should be more reliable in small samples.
 TailWZipf.m does the same, but for weighted data.
 
-
+ComputeTailIndices.m is a wrapper to run the scripts and draw graphs. TailIndices.m is a script to read data and write estimates.
