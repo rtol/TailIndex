@@ -1,14 +1,12 @@
-# PilotETSChina
-Matlab routines to scrape market data for China's pilot emission trade schemes
+# TailIndex
+Matlab routines to estimate the tail index alpha
 
-HubeiETS.m scrapes the data for all markets. Source: http://www.hbets.cn/index.php/index-show-tid-11.html
+The generalized Central Limit Theorem has that the sum of independent, identically and symmetrically distributed random variables converges to a distribution whose tail is Pareto, with 0 < alpha <= 2. If alpha = 2, the variance is finite and the specific Central Limit Theorem applies so that the tail is Normal.
 
-ShenzhenETS.m scrapes the data for the Shenzhen market. Source: http://www.cerx.cn/en/MarketsInformation/index.jhtml
+TailHill.m is a function that returns the maximum likelihood, best linear unbiased, least squares and moment estimators.
+TailWHill.m does the same, but for weighted data.
 
-BeijingETS.m scrapes the data for the Beijing market. Source: https://www.bjets.com.cn/article/jyxx/#
+TailZipf.m is a function that returns estimators based on the QQ-plots. The advantage of these estimators is that they are robust to deviations from the Pareto distribution. They should be more reliable in small samples.
+TailWZipf.m does the same, but for weighted data.
 
-TianjinETS.m scrapes the data for the Tianjin market. Source: https://www.chinatcx.com.cn/list/13.html
 
-Data for the Guangzhou market can be downloaded: http://www.cnemission.com/article/hqxx/
-
-Data for the Chongqing market can be copy-pasted from: http://tpf.cqggzy.com:100/itf/themes/cqkfts/index.html
