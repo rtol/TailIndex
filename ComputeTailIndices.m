@@ -1,13 +1,13 @@
 %% Estimate tail indices
 %
 % First version: Richard Tol, 8 November 2011
-% This version: Richard Tol, 29 February 2020
+% This version: Richard Tol, 9 March 2020
 
 display('Estimate tail indices');
 
 N = length(SCCs);
 K = round(N/5);
-weight = 'none';
+weight = 'quality';
 
 switch weight
     case 'author'
@@ -36,6 +36,13 @@ switch weight
 %ignore KR, SS because variants of BF
         end
 end
+
+%% Huisman
+[HH HHsd] = TailHuisman(Hill(10:K)',10,K);
+[HA HAsd] = TailHuisman(AM(10:K)',10,K);
+[HT HTsd] = TailHuisman(T1(10:K)',10,K);
+[HD HDsd] = TailHuisman(D(10:K)',10,K);
+[HB HBsd] = TailHuisman(BF(10:K)',10,K);
 
 %% plot
 m = 100;
