@@ -1,5 +1,6 @@
-function [H Hsd] = TailHuisman(Hill,min,max);
+function [H Hsd] = TailHuismanOLS(Hill,min,max);
 % Huisman, Koedijk, Kool, Palm (J Bus Econ Stat, 2001) estimator of tail index
+% OLS implementation
 %
 % Hill is a vector of estimates (e.g., Hill's) of the tail-index
 % min is the smallest sample size used to estimate the tail-index
